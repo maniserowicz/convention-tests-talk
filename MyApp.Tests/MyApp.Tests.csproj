@@ -63,6 +63,10 @@
       <Project>{7a5a29f0-578a-472e-9c98-f1e4e26270a5}</Project>
       <Name>MyApp.Database</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyApp.Web\MyApp.Web.csproj">
+      <Project>{a44ec5cd-f834-47a9-8641-ed5f3faa59a1}</Project>
+      <Name>MyApp.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyApp\MyApp.csproj">
       <Project>{5a51f163-6f7a-4653-8fa8-ab3685dccf5f}</Project>
       <Name>MyApp</Name>
