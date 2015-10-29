@@ -1,0 +1,11 @@
+[Oo]bj/
+[Bb]in/
+_ReSharper.*
+*.user
+*.suo
+*.userprefs
+*.sln.ide
+*.ncrunchsolution
+*.ncrunchproject
+_NCrunch*
+.vs/
