@@ -1,11 +1,11 @@
 ﻿namespace Procent.dotnetconf2015.MyApp.DataAccess
 {
-    public interface UsersRepozytoryInterface
+    public interface IUsersRepozytory
     {
         User GetById(int id);
     }
 
-    public class UsersRepozytory : UsersRepozytoryInterface
+    public class UsersRepozytory : IUsersRepozytory
     {
         public User GetById(int id)
         {
