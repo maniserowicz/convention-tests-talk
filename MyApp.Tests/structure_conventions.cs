@@ -8,11 +8,8 @@ namespace Procent.dotnetconf2015.MyApp.Tests
         [Fact]
         public void each_class_in_DataAccess_namespace_implements_interface()
         {
-            var types = typeof(User).Assembly.GetTypes();
-
-            var data_access_classes = types
+            var data_access_classes = ConventionsHelper.classes()
                 .Where(x => x.Namespace.Contains(".DataAccess"))
-                .Where(x => x.IsClass)
                 .ToList()
             ;
 
