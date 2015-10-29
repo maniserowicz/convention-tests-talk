@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="structure_conventions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyApp.Database\MyApp.Database.csproj">
