@@ -29,5 +29,10 @@ namespace Procent.dotnetconf2015.MyApp.Tests
             return types()
                 .Where(x => x.IsInterface);
         }
+
+        public static bool IsAssignableTo<T>(this Type @this)
+        {
+            return typeof (T).IsAssignableFrom(@this);
+        }
     }
 }
