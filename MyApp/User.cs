@@ -2,8 +2,8 @@
 {
     public class User : IEntity
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public bool IsActive { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string Username { get; set; }
+        public virtual bool IsActive { get; set; }
     }
 }
