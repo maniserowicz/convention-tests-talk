@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 
@@ -28,6 +29,23 @@ namespace Procent.dotnetconf2015.MyApp.Tests
         {
             return types()
                 .Where(x => x.IsInterface);
+        }
+
+        public static string sln_directory()
+        {
+            var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
+
+            while (dir.EnumerateFiles("*.sln").Any() == false)
+            {
+                dir = dir.Parent;
+            }
+
+            return dir.FullName;
+        }
+
+        public static string db_directory()
+        {
+            return Path.Combine(sln_directory(), "db");
         }
 
         public static bool IsAssignableTo<T>(this Type @this)
