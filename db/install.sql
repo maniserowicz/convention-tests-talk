@@ -4,8 +4,3 @@ create table Users (
     [IsActive] [bit] not null,
     constraint PK_Users primary key (Id)
 )
-
-go
-
-create view ActiveUsers as
-    select * from Users where IsActive = 1
