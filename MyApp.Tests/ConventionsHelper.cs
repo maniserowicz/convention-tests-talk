@@ -61,5 +61,10 @@ namespace Procent.dotnetconf2015.MyApp.Tests
         {
             return typeof (T).IsAssignableFrom(@this);
         }
+
+        public static bool IsConcrete(this Type @this)
+        {
+            return !@this.IsAbstract && !@this.IsInterface;
+        }
     }
 }

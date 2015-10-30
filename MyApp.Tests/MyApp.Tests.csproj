@@ -90,6 +90,7 @@
     <Compile Include="nhibernate_requirements.cs" />
     <Compile Include="project_file_conventions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="runnabilility_conventions.cs" />
     <Compile Include="sql_conventions.cs" />
     <Compile Include="structure_conventions.cs" />
   </ItemGroup>
