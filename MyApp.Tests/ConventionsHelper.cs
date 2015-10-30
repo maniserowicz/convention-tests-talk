@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Procent.dotnetconf2015.MyApp.Web;
 
 namespace Procent.dotnetconf2015.MyApp.Tests
 {
@@ -11,6 +12,7 @@ namespace Procent.dotnetconf2015.MyApp.Tests
         public static IEnumerable<Assembly> assemblies()
         {
             yield return typeof (User).Assembly;
+            yield return typeof (MvcApplication).Assembly;
         }
 
         public static IEnumerable<Type> types()
