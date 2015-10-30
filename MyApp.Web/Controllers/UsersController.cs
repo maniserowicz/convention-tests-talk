@@ -2,7 +2,7 @@
 
 namespace Procent.dotnetconf2015.MyApp.Web.Controllers
 {
-    public class UsersCtrl : Controller
+    public class UsersController : Controller
     {
         public ActionResult Index()
         {
