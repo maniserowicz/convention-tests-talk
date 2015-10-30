@@ -4,4 +4,12 @@
     {
         string GetData();
     }
+
+    public class ExternalServiceCommunication : ICommunicateWithExternalService
+    {
+        public string GetData()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }
