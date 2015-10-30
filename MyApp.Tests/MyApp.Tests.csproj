@@ -59,6 +59,7 @@
     <Compile Include="ConventionsHelper.cs" />
     <Compile Include="naming_conventions.cs" />
     <Compile Include="nhibernate_requirements.cs" />
+    <Compile Include="project_file_conventions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sql_conventions.cs" />
     <Compile Include="structure_conventions.cs" />
