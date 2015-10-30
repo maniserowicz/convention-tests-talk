@@ -48,6 +48,13 @@ namespace Procent.dotnetconf2015.MyApp.Tests
             return Path.Combine(sln_directory(), "db");
         }
 
+        public static IEnumerable<string> project_files()
+        {
+            var slnDirectory = sln_directory();
+            return Directory
+                .EnumerateFiles(slnDirectory, "*.csproj", SearchOption.AllDirectories);
+        }
+
         public static bool IsAssignableTo<T>(this Type @this)
         {
             return typeof (T).IsAssignableFrom(@this);
