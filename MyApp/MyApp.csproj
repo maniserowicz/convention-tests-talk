@@ -49,6 +49,8 @@
     <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="_Infrastructure\Composition\CommunicationModule.cs" />
+    <Compile Include="_Infrastructure\Composition\PersistenceModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
