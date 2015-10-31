@@ -33,7 +33,7 @@ namespace Procent.dotnetconf2015.MyApp.UserRegistration
             _events.Publish(new UserRegistered
             {
                 Username = command.Username,
-                RegistrationTime = DateTime.Now,
+                RegistrationTime = DateTime.UtcNow
             });
         }
     }
