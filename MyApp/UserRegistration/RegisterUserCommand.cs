@@ -8,24 +8,36 @@ namespace Procent.dotnetconf2015.MyApp.UserRegistration
         public string Username { get; set; }
     }
 
+    public class UserRegistered : IEvent
+    {
+        public string Username { get; set; }
+    }
+
     public class SaveUserInDatabase : IHandleCommand<RegisterUserCommand>
     {
         private readonly IUsersRepozytory _usersRepo;
+        private readonly IEventsBus _events;
 
-        public SaveUserInDatabase(IUsersRepozytory usersRepo)
+        public SaveUserInDatabase(IUsersRepozytory usersRepo, IEventsBus events)
         {
             _usersRepo = usersRepo;
+            _events = events;
         }
 
         public void Handle(RegisterUserCommand command)
         {
             _usersRepo.AddUser(command.Username);
+
+            _events.Publish(new UserRegistered
+            {
+                Username = command.Username
+            });
         }
     }
 
-    public class SendConfirmationEmail : IHandleCommand<RegisterUserCommand>
+    public class SendConfirmationEmail : IHandleEvent<UserRegistered>
     {
-        public void Handle(RegisterUserCommand command)
+        public void Handle(UserRegistered @event)
         {
         }
     }
