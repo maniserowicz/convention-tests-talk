@@ -108,6 +108,7 @@
     <Compile Include="composition_conventions.cs" />
     <Compile Include="ConventionsHelper.cs" />
     <Compile Include="cqrs_conventions.cs" />
+    <Compile Include="datetime_conventions.cs" />
     <Compile Include="naming_conventions.cs" />
     <Compile Include="nhibernate_requirements.cs" />
     <Compile Include="project_file_conventions.cs" />

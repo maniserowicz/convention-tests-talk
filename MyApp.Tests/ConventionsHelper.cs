@@ -66,5 +66,13 @@ namespace Procent.dotnetconf2015.MyApp.Tests
         {
             return !@this.IsAbstract && !@this.IsInterface;
         }
+
+        public static IEnumerable<string> GetSourceFiles()
+        {
+            var currentDirectory = Directory.GetCurrentDirectory();
+            var combine = Path.Combine(currentDirectory, "..", "..", "..");
+            var path = Path.GetFullPath(combine);
+            return Directory.GetFiles(path, "*.cs", SearchOption.AllDirectories);
+        }
     }
 }
