@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="composition_conventions.cs" />
     <Compile Include="ConventionsHelper.cs" />
     <Compile Include="naming_conventions.cs" />
     <Compile Include="nhibernate_requirements.cs" />
