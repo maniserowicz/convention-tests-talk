@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using Procent.dotnetconf2015.MyApp._Infrastructure;
 using Xunit;
 
 namespace Procent.dotnetconf2015.MyApp.Tests
@@ -8,7 +10,9 @@ namespace Procent.dotnetconf2015.MyApp.Tests
         [Fact]
         public void each_interface_has_at_least_one_implementation()
         {
-            var interfaces = ConventionsHelper.interfaces();
+            var interfaces = ConventionsHelper.interfaces()
+                .Where(x => x.Namespace.Contains("._Infrastructure") == false)
+                .ToList();
 
             var concrete_types = ConventionsHelper.classes()
                 .Where(x => x.IsConcrete())

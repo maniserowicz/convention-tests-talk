@@ -19,6 +19,7 @@ namespace Procent.dotnetconf2015.MyApp.Tests
 
             var service_interfaces = ConventionsHelper.interfaces()
                 .Where(x => x != typeof (IEntity))
+                .Where(x => x.Namespace.Contains("._Infrastructure") == false)
                 .ToList();
 
             Assert.NotEmpty(service_interfaces);
