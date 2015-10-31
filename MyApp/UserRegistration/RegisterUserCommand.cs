@@ -1,4 +1,5 @@
-﻿using Procent.dotnetconf2015.MyApp.DataAccess;
+﻿using System;
+using Procent.dotnetconf2015.MyApp.DataAccess;
 using Procent.dotnetconf2015.MyApp._Infrastructure;
 
 namespace Procent.dotnetconf2015.MyApp.UserRegistration
@@ -11,6 +12,7 @@ namespace Procent.dotnetconf2015.MyApp.UserRegistration
     public class UserRegistered : IEvent
     {
         public string Username { get; set; }
+        public DateTime RegistrationTime { get; set; }
     }
 
     public class SaveUserInDatabase : IHandleCommand<RegisterUserCommand>
@@ -30,7 +32,8 @@ namespace Procent.dotnetconf2015.MyApp.UserRegistration
 
             _events.Publish(new UserRegistered
             {
-                Username = command.Username
+                Username = command.Username,
+                RegistrationTime = DateTime.Now,
             });
         }
     }
